@@ -71,4 +71,8 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 Assets/Wwise/LauncherInfo.json.meta
-*.meta
+
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
+Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset
