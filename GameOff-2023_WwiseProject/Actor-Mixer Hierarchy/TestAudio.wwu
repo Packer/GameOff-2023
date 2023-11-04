@@ -14,12 +14,18 @@
 					</ReferenceList>
 					<ChildrenList>
 						<RandomSequenceContainer Name="TestTone_2D" ID="{973A058E-8D9F-48E8-B0F4-6E6FC0A95A4F}" ShortID="260571258">
+							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Bridge" ID="{4366D67B-A380-4C95-BCAE-7B09AD742247}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>

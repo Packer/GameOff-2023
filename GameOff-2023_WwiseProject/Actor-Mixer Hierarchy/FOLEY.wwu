@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0E0F8628-90D7-491B-A527-672EEDB0DEF1}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="FOLEY" ID="{0E0F8628-90D7-491B-A527-672EEDB0DEF1}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="19"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="FOLEY" ID="{DB4ED38F-7B79-43A8-A3A3-10333F2BF440}" ShortID="540267986">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Foley" ID="{DFFE1F67-ABF5-4F62-A6A6-B1874ADF6074}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Footsteps" ID="{31D829A7-0026-406B-9006-B89925491915}" ShortID="979579493">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="Footstep_MaterialSwitch" ID="{11EA301D-D11E-4D49-85B5-0DAB118642F9}" ShortID="1043413263">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Stairs" ID="{98D2ED1A-B512-4ABA-8878-E910194870EF}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="GroundMaterial_Switch" ID="{0687C22E-28E8-42CF-8D25-BB0257E05F24}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SwitchContainer Name="TopFloor" ID="{5C67C879-E7B4-4E36-9A2C-723B3AE4DEE7}" ShortID="700406104">
+											<PropertyList>
+												<Property Name="Highpass" Type="int16">
+													<ValueList>
+														<Value>15</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="PlayerSpeed_Switch" ID="{EC9EE2CA-E97E-4AD5-A3B7-47F024C62C4C}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Sprint" ID="{8F1EE0C3-B954-4AD5-B5C0-86BB37CBD155}" ShortID="55224651">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>15</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-001" ID="{535C8262-CA90-495B-BF40-7FFB042373E0}" ShortID="13025095">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{2CD3BB61-E6F9-4015-93F2-5895153DA106}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="556043358"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{2CD3BB61-E6F9-4015-93F2-5895153DA106}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-002" ID="{42D44CBE-2F98-442C-B04B-977C5D2F0B35}" ShortID="900084971">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{5383F019-D307-44DF-BD16-9DA17CEB9E6B}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.334805345117845"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.357961910774411"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="833425414"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{5383F019-D307-44DF-BD16-9DA17CEB9E6B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-003" ID="{1E1A788C-0B27-4A4E-8F2C-2D2F0E5F16F4}" ShortID="192139443">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{FC567D12-F525-4741-BA4D-D30EE13927EC}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="766374060"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{FC567D12-F525-4741-BA4D-D30EE13927EC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-004" ID="{5760C8A3-D582-44D6-B7C2-3EA220EE1806}" ShortID="667029028">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{F15D8915-7B63-403F-9396-954DB8BAEAEF}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="731137033"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{F15D8915-7B63-403F-9396-954DB8BAEAEF}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-005" ID="{CDD31710-9825-4EFA-BB0B-30FB52FD8ED5}" ShortID="252891598">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{8B2E1DD0-F0D0-4437-B48B-D428E8A125A8}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="484099287"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{8B2E1DD0-F0D0-4437-B48B-D428E8A125A8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Walk" ID="{DE2560F3-B95B-401C-B86E-81C910F537C0}" ShortID="1029451180">
+													<PropertyList>
+														<Property Name="Lowpass" Type="int16">
+															<ValueList>
+																<Value>30</Value>
+															</ValueList>
+														</Property>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.6"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-004" ID="{FB5A1984-F039-4A0E-AE52-CDDFC37887CE}" ShortID="416825476">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{0529E521-0297-473A-B65E-8FC148497047}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="731137033"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{0529E521-0297-473A-B65E-8FC148497047}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-005" ID="{81C5BA84-C35C-453A-B7A7-009BA0B2791D}" ShortID="579083417">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{22ED9A6D-7D2A-4F3E-8B07-44211A090559}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="484099287"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{22ED9A6D-7D2A-4F3E-8B07-44211A090559}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-002" ID="{D803AF25-458B-42B4-A233-D61ACFBB435F}" ShortID="472435404">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{FEF6DB53-A0EB-4FD6-9179-15DE55F7C3BE}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.263405934343435"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.362303766835017"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="450785255"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{FEF6DB53-A0EB-4FD6-9179-15DE55F7C3BE}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-001" ID="{5FAA31E1-DF35-4423-9D1F-DD78C332D0C7}" ShortID="736677257">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{2D72AE99-3377-4D42-8184-9EB0F199EC04}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="556043358"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{2D72AE99-3377-4D42-8184-9EB0F199EC04}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-003" ID="{EDC395BC-D838-4767-A179-C6F59909A5D1}" ShortID="729718755">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{B8B11363-B8E6-4DB3-8017-9B63464F1963}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="766374060"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{B8B11363-B8E6-4DB3-8017-9B63464F1963}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Sprint" ID="{8F1EE0C3-B954-4AD5-B5C0-86BB37CBD155}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+														</PropertyList>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Walk" ID="{DE2560F3-B95B-401C-B86E-81C910F537C0}"/>
+														<PropertyList>
+															<Property Name="ContinuePlay" Type="bool" Value="True"/>
+														</PropertyList>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}"/>
+														<ItemList>
+															<ItemRef Name="Walk" ID="{DE2560F3-B95B-401C-B86E-81C910F537C0}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Sprint" ID="{95220ACF-BFC5-48B4-90BE-41E6C0A17968}"/>
+														<ItemList>
+															<ItemRef Name="Sprint" ID="{8F1EE0C3-B954-4AD5-B5C0-86BB37CBD155}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="Stairs" ID="{D89202E3-54F5-4277-AD08-6D2BB9190BF4}" ShortID="622152436">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="PlayerSpeed_Switch" ID="{EC9EE2CA-E97E-4AD5-A3B7-47F024C62C4C}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Sprint" ID="{DA1306E9-FD05-47C1-A18F-D80AB0F666F1}" ShortID="25499759">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.4"/>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-001" ID="{EC9E2057-9D4D-46A8-B7FE-415156DA2D84}" ShortID="640988040">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-001" ID="{BFB5209E-D7DB-4C0F-BD8E-4300B0462EFB}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="386755606"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-001" ID="{BFB5209E-D7DB-4C0F-BD8E-4300B0462EFB}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-002" ID="{AF1653FD-D16E-43E4-B423-855F7A75ED86}" ShortID="828621035">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-002" ID="{037A01A3-4A28-4AE9-9478-BA5D58272CC8}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="762234786"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-002" ID="{037A01A3-4A28-4AE9-9478-BA5D58272CC8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-003" ID="{750D025C-2E86-4647-A2F5-D6692245C400}" ShortID="612534080">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-003" ID="{15751697-7645-4A98-A58E-F7035440ACB6}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="254460671"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-003" ID="{15751697-7645-4A98-A58E-F7035440ACB6}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-004" ID="{9495FDAB-79D5-44C8-9861-0A611BBB5EB7}" ShortID="623913098">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-004" ID="{578512D8-4A0E-4CBE-BA3B-3C118913F34D}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="158534446"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-004" ID="{578512D8-4A0E-4CBE-BA3B-3C118913F34D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-005" ID="{974A572C-744A-48DB-868A-AB6C2376E3C0}" ShortID="1035908662">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-005" ID="{B8CD486E-49ED-45AB-AC25-6B96061500BA}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="946580588"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-005" ID="{B8CD486E-49ED-45AB-AC25-6B96061500BA}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Sprint-006" ID="{F5BDEECC-C69B-4DC4-901D-65F974747F11}" ShortID="235215859">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Sprint-006" ID="{6BA943F6-088F-442A-85F5-7FEA2A047FC0}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-006.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="486855289"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Sprint-006" ID="{6BA943F6-088F-442A-85F5-7FEA2A047FC0}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Walk" ID="{96AC98CF-2632-419B-BE1B-5EC5AF756F78}" ShortID="862098208">
+													<PropertyList>
+														<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+														<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="3"/>
+														<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.6"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-001" ID="{6E784C4F-0094-4D2E-A829-9FD46311ADFC}" ShortID="753645222">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-001" ID="{894D56BF-F3D3-4CBA-88EF-73215A48302B}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="999352454"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-001" ID="{894D56BF-F3D3-4CBA-88EF-73215A48302B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-002" ID="{1D11DF8C-D88A-4AFD-A9DA-5A2D63F3C5D7}" ShortID="895435296">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>200</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>25</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-002" ID="{8BEB4D00-2A32-4E7A-A013-93701CE2E94F}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="921943339"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-002" ID="{8BEB4D00-2A32-4E7A-A013-93701CE2E94F}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-003" ID="{CD72E82D-E84A-4030-B86C-1DFB953C380E}" ShortID="557975849">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-003" ID="{2A37F35F-C4A2-4492-8940-2D85E0FFB8A7}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="952471427"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-003" ID="{2A37F35F-C4A2-4492-8940-2D85E0FFB8A7}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-004" ID="{56AC38E7-0CD8-4DEF-AFD1-6780926ADC99}" ShortID="81993933">
+															<PropertyList>
+																<Property Name="Inclusion" Type="bool">
+																	<ValueList>
+																		<Value>False</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-004" ID="{D8B32A30-874E-4D9F-BC9E-3B000278FC1E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="404778343"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-004" ID="{D8B32A30-874E-4D9F-BC9E-3B000278FC1E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-005" ID="{6EB35425-9E44-427A-BB93-EDBDC8B4A797}" ShortID="999493635">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-005" ID="{A5CAB871-1589-4FB1-91C0-A837B07E1CC2}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="806118947"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-005" ID="{A5CAB871-1589-4FB1-91C0-A837B07E1CC2}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_Stairs_Walk-006" ID="{8524FF1C-68A7-4DF7-B999-759AF373FB4D}" ShortID="694121027">
+															<PropertyList>
+																<Property Name="Pitch" Type="int32">
+																	<ValueList>
+																		<Value>220</Value>
+																	</ValueList>
+																</Property>
+																<Property Name="Weight" Type="Real64">
+																	<ValueList>
+																		<Value>25</Value>
+																	</ValueList>
+																</Property>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_Stairs_Walk-006" ID="{D76FF7FA-6A21-4061-ABAC-805785DF847D}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-006.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="99784002"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_Stairs_Walk-006" ID="{D76FF7FA-6A21-4061-ABAC-805785DF847D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Walk" ID="{96AC98CF-2632-419B-BE1B-5EC5AF756F78}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Sprint" ID="{DA1306E9-FD05-47C1-A18F-D80AB0F666F1}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}"/>
+														<ItemList>
+															<ItemRef Name="Walk" ID="{96AC98CF-2632-419B-BE1B-5EC5AF756F78}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Sprint" ID="{95220ACF-BFC5-48B4-90BE-41E6C0A17968}"/>
+														<ItemList>
+															<ItemRef Name="Sprint" ID="{DA1306E9-FD05-47C1-A18F-D80AB0F666F1}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+										<SwitchContainer Name="BottomFloor" ID="{B6EA87BA-A5B3-40E1-A30C-48F1E8B994EC}" ShortID="581272492">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+												</Reference>
+												<Reference Name="DefaultSwitchOrState">
+													<ObjectRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="PlayerSpeed_Switch" ID="{EC9EE2CA-E97E-4AD5-A3B7-47F024C62C4C}" WorkUnitID="{CD812443-12FB-46D4-AC10-C5280963E2EF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<RandomSequenceContainer Name="Sprint" ID="{C80398DC-74F0-404B-BBC2-A2B6565CAE5D}" ShortID="420588965">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>19</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-001" ID="{3595E972-9726-4F11-AD9F-0B1B776194CF}" ShortID="106511234">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{649D83E5-3804-4FAB-8876-7C6762E9770C}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="556043358"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{649D83E5-3804-4FAB-8876-7C6762E9770C}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-002" ID="{B3F6F388-D617-4BD7-AAF8-C5E2C06A0CA4}" ShortID="936028278">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{FF06FB91-F5EF-45B4-8D1E-EDF99F5FD730}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.251345223063974"/>
+																		<Property Name="FadeOutShape" Type="int16" Value="3"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.322744633838384"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="647059479"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{FF06FB91-F5EF-45B4-8D1E-EDF99F5FD730}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-003" ID="{3AEF83E3-FE53-4CBE-A53C-F49035C35CB2}" ShortID="907254500">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{DF40FC63-25CF-47E3-B1D8-73D736D9C810}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="766374060"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{DF40FC63-25CF-47E3-B1D8-73D736D9C810}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-004" ID="{377E651E-B923-4CA0-B18A-7FCCFF7B6BB5}" ShortID="635980091">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{A2DAB50E-9860-4B9C-A0B8-96181B25F2BC}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="731137033"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{A2DAB50E-9860-4B9C-A0B8-96181B25F2BC}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-005" ID="{3D906F1F-34C5-4B65-994B-F112927D185E}" ShortID="624541603">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{55A22DD8-FCCE-4EE7-888B-EAC1D8B35B0E}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="484099287"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{55A22DD8-FCCE-4EE7-888B-EAC1D8B35B0E}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+												<RandomSequenceContainer Name="Walk" ID="{74122E29-AAB7-476C-9626-AF5534ABFF5F}" ShortID="756289832">
+													<PropertyList>
+														<Property Name="Highpass" Type="int16">
+															<ValueList>
+																<Value>15</Value>
+															</ValueList>
+														</Property>
+														<Property Name="Volume" Type="Real64">
+															<ValueList>
+																<Value>-3</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-001" ID="{7147BCFB-F935-4910-9A4B-FF23BAC78D12}" ShortID="117377280">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{707340CA-BE7E-435E-B679-881E494CF3F8}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="556043358"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-001" ID="{707340CA-BE7E-435E-B679-881E494CF3F8}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-002" ID="{A23BA206-5887-4765-8788-350F707C4A31}" ShortID="977939175">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{7312B026-48BF-4B8F-A56B-E683BECF7C90}">
+																	<PropertyList>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.299588068181818"/>
+																		<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.349278198653199"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="809261433"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-002" ID="{7312B026-48BF-4B8F-A56B-E683BECF7C90}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-003" ID="{5E1AA00A-02A4-4C7C-A80B-002B421455C2}" ShortID="904148972">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{5D28994C-97C9-44D3-8E25-91E9FED2D00B}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="766374060"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-003" ID="{5D28994C-97C9-44D3-8E25-91E9FED2D00B}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-004" ID="{72836719-6987-4412-9A9A-874C27B4559D}" ShortID="193453834">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{65AFF09D-F336-4C73-955E-15F31B3C6157}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="731137033"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-004" ID="{65AFF09D-F336-4C73-955E-15F31B3C6157}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="SCALE_Footstep_TopFloor_Walk-005" ID="{4459410D-801C-4C20-B048-4E85345C996E}" ShortID="876003721">
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{1E440480-0E43-4E13-97B6-C05596F4E319}">
+																	<Language>SFX</Language>
+																	<AudioFile>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</AudioFile>
+																	<MediaIDList>
+																		<MediaID ID="484099287"/>
+																	</MediaIDList>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="SCALE_Footstep_TopFloor_Walk-005" ID="{1E440480-0E43-4E13-97B6-C05596F4E319}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+												</RandomSequenceContainer>
+											</ChildrenList>
+											<GroupingInfo>
+												<GroupingBehaviorList>
+													<GroupingBehavior>
+														<ItemRef Name="Walk" ID="{74122E29-AAB7-476C-9626-AF5534ABFF5F}"/>
+													</GroupingBehavior>
+													<GroupingBehavior>
+														<ItemRef Name="Sprint" ID="{C80398DC-74F0-404B-BBC2-A2B6565CAE5D}"/>
+													</GroupingBehavior>
+												</GroupingBehaviorList>
+												<GroupingList>
+													<Grouping>
+														<SwitchRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}"/>
+														<ItemList>
+															<ItemRef Name="Walk" ID="{74122E29-AAB7-476C-9626-AF5534ABFF5F}"/>
+														</ItemList>
+													</Grouping>
+													<Grouping>
+														<SwitchRef Name="Sprint" ID="{95220ACF-BFC5-48B4-90BE-41E6C0A17968}"/>
+														<ItemList>
+															<ItemRef Name="Sprint" ID="{C80398DC-74F0-404B-BBC2-A2B6565CAE5D}"/>
+														</ItemList>
+													</Grouping>
+												</GroupingList>
+											</GroupingInfo>
+										</SwitchContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="TopFloor" ID="{5C67C879-E7B4-4E36-9A2C-723B3AE4DEE7}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="BottomFloor" ID="{B6EA87BA-A5B3-40E1-A30C-48F1E8B994EC}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Stairs" ID="{D89202E3-54F5-4277-AD08-6D2BB9190BF4}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="TopFloor" ID="{2B26B418-4C26-491B-89A0-C5EED2DDC6BB}"/>
+												<ItemList>
+													<ItemRef Name="TopFloor" ID="{5C67C879-E7B4-4E36-9A2C-723B3AE4DEE7}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Stairs" ID="{98D2ED1A-B512-4ABA-8878-E910194870EF}"/>
+												<ItemList>
+													<ItemRef Name="Stairs" ID="{D89202E3-54F5-4277-AD08-6D2BB9190BF4}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="BottomFloor" ID="{D92F7141-FB06-4760-B339-2CE1814EC121}"/>
+												<ItemList>
+													<ItemRef Name="BottomFloor" ID="{B6EA87BA-A5B3-40E1-A30C-48F1E8B994EC}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+						</ActorMixer>
+						<ActorMixer Name="Gear" ID="{F296F1B4-3E3A-40CC-AFB1-E22EB8A420BD}" ShortID="584807827">
+							<PropertyList>
+								<Property Name="OverrideOutput" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="gear" ID="{FD6F98B7-55D2-4660-8185-CFD5F48E749C}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

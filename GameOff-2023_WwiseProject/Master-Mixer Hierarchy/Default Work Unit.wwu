@@ -9,6 +9,92 @@
 							<ObjectRef Name="System" ID="{3817EACC-8EAD-4A57-BEC2-E31988DCDD95}" WorkUnitID="{6ED8DB29-6624-4D8F-BC20-45B6F3B2AEFB}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="SFX" ID="{00119F86-7376-4F06-8F4B-0977E2B967AE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="10"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Bus Name="Ambience" ID="{06A91198-B972-4AFF-B2DB-B22E2FC6FD64}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="27"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Bus Name="beds" ID="{4CF82945-EDC9-429B-9A22-956EE90BBD73}"/>
+										<Bus Name="emitters" ID="{3B2DD8FE-6ED9-4890-B7D0-85A4420D7F7C}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Creatures" ID="{9437B4F3-7B02-4C84-AC2F-63B299C7E7F8}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="10"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+								</Bus>
+								<Bus Name="Ship" ID="{84F82347-1A92-4305-B62F-D55C549FBF0E}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="4"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Bus Name="interior" ID="{44EEFCFF-C499-4E23-BB91-3011FF4A37C7}"/>
+										<Bus Name="exterior" ID="{2532F4E2-A685-48B8-8B48-0BE79CBD6F21}"/>
+									</ChildrenList>
+								</Bus>
+								<Bus Name="Foley" ID="{DFFE1F67-ABF5-4F62-A6A6-B1874ADF6074}">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="19"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<Bus Name="footsteps" ID="{366E8C7F-5D21-4F5E-B90A-AC560BAD7A6B}"/>
+										<Bus Name="gear" ID="{FD6F98B7-55D2-4660-8185-CFD5F48E749C}"/>
+									</ChildrenList>
+								</Bus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="REVERBS" ID="{ACBF4AF4-2952-48D3-A4E3-40DC2DD5D907}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="27"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<AuxBus Name="Bridge" ID="{4366D67B-A380-4C95-BCAE-7B09AD742247}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Not_A_Yellow_Submarine" ID="{B5719071-C58D-49FA-8766-B1D986D017EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+								<AuxBus Name="CaptainsQuarters" ID="{E4DFB853-685B-4D19-8653-99F5C26B9096}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium_High_Absorbtion" ID="{E22DBBB6-7656-4B93-A28D-C003FD416889}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
+						</Bus>
+						<Bus Name="VO" ID="{9312029F-E3A7-4F81-B406-A98AB1116953}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="25"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="UI" ID="{F537490F-CFB4-48F9-98B7-E18070804371}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="MUSIC" ID="{8ADAB767-4BA8-4463-91B9-06E0D1C6F07B}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

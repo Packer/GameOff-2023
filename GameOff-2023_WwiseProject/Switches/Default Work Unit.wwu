@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CD812443-12FB-46D4-AC10-C5280963E2EF}" SchemaVersion="110">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{CD812443-12FB-46D4-AC10-C5280963E2EF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CD812443-12FB-46D4-AC10-C5280963E2EF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="MusicType" ID="{875DE8B8-6CBA-46F0-9853-84030E6DE578}">
+					<ChildrenList>
+						<Switch Name="NoMusic" ID="{D611BE43-64D3-4F94-9C4E-9A9E97E8DBAF}"/>
+						<Switch Name="Test" ID="{A4E50778-5338-480E-A7DF-E6D2EF43338F}"/>
+						<Switch Name="Combat_Light" ID="{E01356FC-7730-40A4-B4C2-7F23777BBE39}"/>
+						<Switch Name="Combat_Boss" ID="{A56BE58C-27CE-44E1-9191-F86AC8C24311}"/>
+						<Switch Name="Exploration" ID="{64DBEB82-B9A6-498F-8B94-C28FC899E219}"/>
+						<Switch Name="Idle" ID="{EB1F4512-900F-4125-9E4A-11B26374D85C}"/>
+						<Switch Name="Drilling" ID="{90510B37-2602-4EE9-9828-71C1719F6BAB}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="PlayerSpeed_Switch" ID="{EC9EE2CA-E97E-4AD5-A3B7-47F024C62C4C}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}"/>
+						<Switch Name="Sprint" ID="{95220ACF-BFC5-48B4-90BE-41E6C0A17968}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="RTPC_PlayerSpeed" ID="{3E139FCB-80A3-4BB4-80A4-381FD7ABC2F8}"/>
+						<Curve Name="" ID="{5A219125-F49B-42AD-A651-220C0FE673B1}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>0</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>0.74879</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>1.74879</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3</XPos>
+									<YPos>2</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="GroundMaterial_Switch" ID="{0687C22E-28E8-42CF-8D25-BB0257E05F24}">
+					<ChildrenList>
+						<Switch Name="TopFloor" ID="{2B26B418-4C26-491B-89A0-C5EED2DDC6BB}"/>
+						<Switch Name="Stairs" ID="{98D2ED1A-B512-4ABA-8878-E910194870EF}"/>
+						<Switch Name="BottomFloor" ID="{D92F7141-FB06-4760-B339-2CE1814EC121}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

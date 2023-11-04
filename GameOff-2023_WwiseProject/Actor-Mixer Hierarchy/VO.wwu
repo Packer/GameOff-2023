@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F7BFA2DF-3783-4E1C-9E7C-3DDFAC5D61DF}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="VO" ID="{F7BFA2DF-3783-4E1C-9E7C-3DDFAC5D61DF}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="25"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="VO" ID="{C11BDEFA-5897-44E2-9E68-D508BC4BB187}" ShortID="524609593">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="VO" ID="{9312029F-E3A7-4F81-B406-A98AB1116953}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

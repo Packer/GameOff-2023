@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4DC6E610-6BB0-46E5-A1E7-DD78C25A1877}" SchemaVersion="110">
+	<Events>
+		<WorkUnit Name="FOLEY" ID="{4DC6E610-6BB0-46E5-A1E7-DD78C25A1877}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Footstep_MaterialSwitch" ID="{C7A65060-63FA-44FD-A8B1-164D0B6B1FDC}">
+					<Comment>RTPC_PlayerSpeed
+1 = Walk
+2 = Sprint</Comment>
+					<ChildrenList>
+						<Action Name="" ID="{C85D8F7F-83F5-42A7-A420-1DF0D2E13FC4}" ShortID="809237184">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep_MaterialSwitch" ID="{11EA301D-D11E-4D49-85B5-0DAB118642F9}" WorkUnitID="{0E0F8628-90D7-491B-A527-672EEDB0DEF1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Break_Footstep_MaterialSwitch" ID="{EEE78BC5-DE61-44A2-92B1-3A69471A7EA0}">
+					<ChildrenList>
+						<Action Name="" ID="{92755ACD-AC88-47F7-BE7A-0980C7B23EB8}" ShortID="318185778">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="34"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footstep_MaterialSwitch" ID="{11EA301D-D11E-4D49-85B5-0DAB118642F9}" WorkUnitID="{0E0F8628-90D7-491B-A527-672EEDB0DEF1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

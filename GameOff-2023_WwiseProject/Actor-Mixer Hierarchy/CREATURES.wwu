@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{60BF9550-B7D5-4CCE-9958-84D2992EB20E}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="CREATURES" ID="{60BF9550-B7D5-4CCE-9958-84D2992EB20E}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="10"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<ActorMixer Name="CREATURES" ID="{4B3702C2-EC92-48D8-A25D-9822D11E8C7C}" ShortID="261016190">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Creatures" ID="{9437B4F3-7B02-4C84-AC2F-63B299C7E7F8}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Territorial" ID="{763A5792-4D3A-4F8C-887A-B3D7BAB95D7C}" ShortID="110224885">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="Defender_Boss" ID="{FF701004-7AD3-4EA9-94EC-B505407019A8}" ShortID="416617989">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+						<ActorMixer Name="Swarm" ID="{D01D07EA-7D15-4E01-AA1C-B6D030404CD7}" ShortID="432884375">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+								</Reference>
+							</ReferenceList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

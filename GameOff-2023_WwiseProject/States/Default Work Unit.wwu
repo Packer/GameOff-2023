@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{2FB79187-6B67-483C-8EBC-97FCC0AC1680}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{2FB79187-6B67-483C-8EBC-97FCC0AC1680}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{2FB79187-6B67-483C-8EBC-97FCC0AC1680}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Gamestate" ID="{344A1F8B-0BED-40B3-8E77-92B17C0785CE}">
+					<ChildrenList>
+						<State Name="None" ID="{6A1C19D8-4808-45B3-8EC6-993F0E4C422C}"/>
+						<State Name="InGame" ID="{8590268A-4009-4CA6-9774-29C820411799}"/>
+						<State Name="Pause" ID="{84D86DFB-F06C-4410-9334-EBD4B893009B}"/>
+					</ChildrenList>
+				</StateGroup>
+				<StateGroup Name="PlayerState" ID="{1E7D3474-E5D8-4C08-8399-F3A9EFC5A11A}">
+					<ChildrenList>
+						<State Name="None" ID="{213D6698-0A18-4D79-8AFE-1564D73D8496}"/>
+						<State Name="Alive" ID="{EF655BAC-8A3B-450E-9D7F-499D7C788487}"/>
+						<State Name="Dead" ID="{85C2656B-5660-404C-8198-4C609988144F}"/>
+						<State Name="Blinded" ID="{67224C20-8C9D-49D7-A89B-BDE8CB4F1859}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>
