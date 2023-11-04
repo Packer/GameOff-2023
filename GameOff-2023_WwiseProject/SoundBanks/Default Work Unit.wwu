@@ -10,6 +10,19 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="Main" ID="{C8D14F76-D061-45EA-90A3-EB98F77E38E1}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SHIP" ID="{2DC275C9-D7FC-4245-AADE-AE011295C37D}" WorkUnitID="{2DC275C9-D7FC-4245-AADE-AE011295C37D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="VO" ID="{EEC17705-433F-43B2-8D8A-29F475D6B5CA}" WorkUnitID="{EEC17705-433F-43B2-8D8A-29F475D6B5CA}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="CREATURES" ID="{56ECE81F-4C3B-45ED-A573-285E01441DE3}" WorkUnitID="{56ECE81F-4C3B-45ED-A573-285E01441DE3}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="AMBIENCE" ID="{9698F619-FAAF-46CE-8D49-B44A2E241662}" WorkUnitID="{9698F619-FAAF-46CE-8D49-B44A2E241662}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="FOLEY" ID="{4DC6E610-6BB0-46E5-A1E7-DD78C25A1877}" WorkUnitID="{4DC6E610-6BB0-46E5-A1E7-DD78C25A1877}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MUSIC" ID="{C0AC4573-6DB0-491A-A529-E58CEB95C024}" WorkUnitID="{C0AC4573-6DB0-491A-A529-E58CEB95C024}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{8D8B51F3-4DA6-4DD4-94DE-38DE05B66A2E}" WorkUnitID="{8D8B51F3-4DA6-4DD4-94DE-38DE05B66A2E}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
