@@ -1,0 +1,61 @@
+Event	ID	Name			Wwise Object Path	Notes
+	206882740	Start_MusicSystem			\MUSIC\Start_MusicSystem	
+	3296906710	Stop_MusicSystem			\MUSIC\Stop_MusicSystem	
+	3475931801	Break_Footstep_MaterialSwitch			\FOLEY\Break_Footstep_MaterialSwitch	
+	4225883816	Play_Footstep_MaterialSwitch			\FOLEY\Play_Footstep_MaterialSwitch	RTPC_PlayerSpeed 1 = Walk 2 = Sprint
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3427409782	PlayerSpeed_Switch			\Default Work Unit\PlayerSpeed_Switch	
+	4048174150	MusicType			\Default Work Unit\MusicType	
+	4222483982	GroundMaterial_Switch			\Default Work Unit\GroundMaterial_Switch	
+
+Switch	ID	Name	Switch Group			Notes
+	1296465089	Sprint	PlayerSpeed_Switch			
+	2108779966	Walk	PlayerSpeed_Switch			
+	656193027	Combat_Boss	MusicType			
+	1862135557	NoMusic	MusicType			
+	1874288895	Idle	MusicType			
+	2148865076	Combat_Light	MusicType			
+	2259734576	Drilling	MusicType			
+	2582085496	Exploration	MusicType			
+	3157003241	Test	MusicType			
+	1289942167	Stairs	GroundMaterial_Switch			
+	3511220434	BottomFloor	GroundMaterial_Switch			
+	4243861200	TopFloor	GroundMaterial_Switch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4091656514	Gamestate			\Default Work Unit\Gamestate	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Gamestate			
+	984691642	InGame	Gamestate			
+	3092587493	Pause	Gamestate			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	902125715	Pause	Gamestate	\Interactive Music Hierarchy\Default Work Unit\MusicSwitch		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2653406601	RTPC_PlayerSpeed			\Default Work Unit\RTPC_PlayerSpeed	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	99784002	SCALE_Footstep_Stairs_Walk-006	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-006_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Walk\SCALE_Footstep_Stairs_Walk-006		47994
+	158534446	SCALE_Footstep_Stairs_Sprint-004	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-004_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-004		61082
+	254460671	SCALE_Footstep_Stairs_Sprint-003	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-003_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-003		50744
+	386755606	SCALE_Footstep_Stairs_Sprint-001	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-001_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-001		48736
+	450785255	SCALE_Footstep_TopFloor_Walk-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002_79295EF4.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Walk\SCALE_Footstep_TopFloor_Walk-002		34878
+	484099287	SCALE_Footstep_TopFloor_Walk-005	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Walk\SCALE_Footstep_TopFloor_Walk-005		48070
+	486855289	SCALE_Footstep_Stairs_Sprint-006	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-006_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-006		53188
+	556043358	SCALE_Footstep_TopFloor_Walk-001	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Walk\SCALE_Footstep_TopFloor_Walk-001		42162
+	647059479	SCALE_Footstep_TopFloor_Walk-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002_E40380A7.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\BottomFloor\Sprint\SCALE_Footstep_TopFloor_Walk-002		31080
+	731137033	SCALE_Footstep_TopFloor_Walk-004	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Walk\SCALE_Footstep_TopFloor_Walk-004		34666
+	762234786	SCALE_Footstep_Stairs_Sprint-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-002_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-002		51702
+	766374060	SCALE_Footstep_TopFloor_Walk-003	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Walk\SCALE_Footstep_TopFloor_Walk-003		41076
+	806118947	SCALE_Footstep_Stairs_Walk-005	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-005_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Walk\SCALE_Footstep_Stairs_Walk-005		52478
+	809261433	SCALE_Footstep_TopFloor_Walk-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002_AF0D970B.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\BottomFloor\Walk\SCALE_Footstep_TopFloor_Walk-002		33626
+	833425414	SCALE_Footstep_TopFloor_Walk-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002_F3DDC6A1.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\TopFloor\Sprint\SCALE_Footstep_TopFloor_Walk-002		34460
+	921943339	SCALE_Footstep_Stairs_Walk-002	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-002_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Walk\SCALE_Footstep_Stairs_Walk-002		48986
+	931776003	Music_TESTLOOP	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Music\Music_TESTLOOP_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\TestLoop\Music_TESTLOOP\Music_TESTLOOP		1196980
+	946580588	SCALE_Footstep_Stairs_Sprint-005	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-005_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Sprint\SCALE_Footstep_Stairs_Sprint-005		44326
+	952471427	SCALE_Footstep_Stairs_Walk-003	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-003_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Walk\SCALE_Footstep_Stairs_Walk-003		45630
+	999352454	SCALE_Footstep_Stairs_Walk-001	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Windows\SFX\Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-001_10C4C929.wem		\Actor-Mixer Hierarchy\FOLEY\FOLEY\Footsteps\Footstep_MaterialSwitch\Stairs\Walk\SCALE_Footstep_Stairs_Walk-001		47650
+

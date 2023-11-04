@@ -9,20 +9,102 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{BD51E2AD-4860-9DEF-5105-63F6666E4C96}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="2265839006" Name="Not_A_Yellow_Submarine" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="85412153" Name="Ambience"/>
+				<Bus Id="247557814" Name="Foley"/>
+				<Bus Id="284967655" Name="Ship"/>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="612957004" Name="emitters"/>
+				<Bus Id="1106291253" Name="beds"/>
+				<Bus Id="1132214669" Name="interior"/>
+				<Bus Id="1172844112" Name="gear"/>
+				<Bus Id="1534528548" Name="VO"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="2213992659" Name="exterior"/>
+				<Bus Id="2385628198" Name="footsteps"/>
+				<Bus Id="3545700988" Name="REVERBS"/>
+				<Bus Id="3567116701" Name="Creatures"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="MUSIC"/>
 			</Busses>
+			<AuxBusses>
+				<AuxBus Id="2068062714" Name="Bridge">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2265839006"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+				<AuxBus Id="2354497765" Name="CaptainsQuarters">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2891462749"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
+			</AuxBusses>
+			<GameParameters>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="3285234865" Name="PlayerState">
+					<States>
+						<State Id="655265632" Name="Alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="1088079745" Name="Blinded"/>
+						<State Id="2044049779" Name="Dead"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="4091656514" Name="Gamestate">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="984691642" Name="InGame"/>
+						<State Id="3092587493" Name="Pause"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="3427409782" Name="PlayerSpeed_Switch">
+					<GameParameterRef Id="2653406601"/>
+					<Switches>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="2108779966" Name="Walk"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4048174150" Name="MusicType">
+					<Switches>
+						<Switch Id="656193027" Name="Combat_Boss"/>
+						<Switch Id="1862135557" Name="NoMusic"/>
+						<Switch Id="1874288895" Name="Idle"/>
+						<Switch Id="2148865076" Name="Combat_Light"/>
+						<Switch Id="2259734576" Name="Drilling"/>
+						<Switch Id="2582085496" Name="Exploration"/>
+						<Switch Id="3157003241" Name="Test"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4222483982" Name="GroundMaterial_Switch">
+					<Switches>
+						<Switch Id="1289942167" Name="Stairs"/>
+						<Switch Id="3511220434" Name="BottomFloor"/>
+						<Switch Id="4243861200" Name="TopFloor"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{0D0FA79A-93D9-D2E5-DD69-E85A45DDFFD7}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{B21C9344-CFFB-A949-6EDB-8BCB69E4FFE8}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
@@ -36,9 +118,222 @@
 					<MediaRefs>
 						<MediaRef Id="38833327"/>
 					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2068062714" Name="Bridge"/>
+					</AuxBusRefs>
 				</Event>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B726ED8E-059D-DDB6-3743-780B0DCC1FA3}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="99784002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-006.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Walk-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="158534446" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-004.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-004_10C4C929.wem</CachePath>
+				</File>
+				<File Id="254460671" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-003.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="386755606" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-001.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="450785255" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_79295EF4.wem</CachePath>
+				</File>
+				<File Id="484099287" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="486855289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-006.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-006_10C4C929.wem</CachePath>
+				</File>
+				<File Id="556043358" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-001.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="647059479" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_E40380A7.wem</CachePath>
+				</File>
+				<File Id="731137033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-004_10C4C929.wem</CachePath>
+				</File>
+				<File Id="762234786" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="766374060" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-003.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="806118947" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-005.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Walk-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="809261433" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_AF0D970B.wem</CachePath>
+				</File>
+				<File Id="833425414" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_F3DDC6A1.wem</CachePath>
+				</File>
+				<File Id="921943339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-002.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Walk-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="931776003" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Music\Music_TESTLOOP.wav</ShortName>
+					<CachePath>SFX/Music/Music_TESTLOOP_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="946580588" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Sprint-005.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Sprint-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="952471427" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-003.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Walk-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="999352454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-001.wav</ShortName>
+					<CachePath>SFX/Foley/Footsteps/Stairs/SCALE_Footstep_Stairs_Walk-001_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3475931801" Name="Break_Footstep_MaterialSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4225883816" Name="Play_Footstep_MaterialSwitch" DurationType="OneShot" DurationMin="0.32274464" DurationMax="0.63527083">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4222483982" Id="4243861200"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="450785255"/>
+										<MediaRef Id="484099287"/>
+										<MediaRef Id="556043358"/>
+										<MediaRef Id="731137033"/>
+										<MediaRef Id="766374060"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="484099287"/>
+										<MediaRef Id="556043358"/>
+										<MediaRef Id="731137033"/>
+										<MediaRef Id="766374060"/>
+										<MediaRef Id="833425414"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4222483982" Id="1289942167" Default="true"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="99784002"/>
+										<MediaRef Id="806118947"/>
+										<MediaRef Id="921943339"/>
+										<MediaRef Id="952471427"/>
+										<MediaRef Id="999352454"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="158534446"/>
+										<MediaRef Id="254460671"/>
+										<MediaRef Id="386755606"/>
+										<MediaRef Id="486855289"/>
+										<MediaRef Id="762234786"/>
+										<MediaRef Id="946580588"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4222483982" Id="3511220434"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="2108779966" Default="true"/>
+									<MediaRefs>
+										<MediaRef Id="484099287"/>
+										<MediaRef Id="556043358"/>
+										<MediaRef Id="731137033"/>
+										<MediaRef Id="766374060"/>
+										<MediaRef Id="809261433"/>
+									</MediaRefs>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="Switch" GroupId="3427409782" Id="1296465089"/>
+									<MediaRefs>
+										<MediaRef Id="484099287"/>
+										<MediaRef Id="556043358"/>
+										<MediaRef Id="647059479"/>
+										<MediaRef Id="731137033"/>
+										<MediaRef Id="766374060"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="206882740" Name="Start_MusicSystem" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="Switch" GroupId="4048174150" Id="3157003241"/>
+							<MediaRefs>
+								<MediaRef Id="931776003"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3296906710" Name="Stop_MusicSystem" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
+			</GameParameters>
+			<SwitchGroups>
+				<SwitchGroup Id="3427409782" Name="PlayerSpeed_Switch">
+					<GameParameterRef Id="2653406601"/>
+					<Switches>
+						<Switch Id="1296465089" Name="Sprint"/>
+						<Switch Id="2108779966" Name="Walk"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4048174150" Name="MusicType">
+					<Switches>
+						<Switch Id="656193027" Name="Combat_Boss"/>
+						<Switch Id="1862135557" Name="NoMusic"/>
+						<Switch Id="1874288895" Name="Idle"/>
+						<Switch Id="2148865076" Name="Combat_Light"/>
+						<Switch Id="2259734576" Name="Drilling"/>
+						<Switch Id="2582085496" Name="Exploration"/>
+						<Switch Id="3157003241" Name="Test"/>
+					</Switches>
+				</SwitchGroup>
+				<SwitchGroup Id="4222483982" Name="GroundMaterial_Switch">
+					<Switches>
+						<Switch Id="1289942167" Name="Stairs"/>
+						<Switch Id="3511220434" Name="BottomFloor"/>
+						<Switch Id="4243861200" Name="TopFloor"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0E649425-B460-E238-FC87-2B37B57ECE16}</FileHash>
+	<FileHash>{C7721D09-E773-5A5D-244D-605E60384CE8}</FileHash>
 </SoundBanksInfo>
