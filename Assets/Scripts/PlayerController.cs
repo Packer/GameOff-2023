@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
+    public float moveSpeed = 4.0f;
     public float mouseSensitivity = 2.0f;
 
     public float worldOffset = 0.01f;
@@ -19,16 +19,20 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Player movement
+        bool sprint = Input.GetButton("Sprint");
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         Vector3 moveDirection = transform.TransformDirection(new Vector3(moveX, 0, moveZ).normalized);
-        cc.SimpleMove(moveDirection * moveSpeed);
+        cc.SimpleMove(moveDirection * moveSpeed * (sprint ? 1.25f : 1f));
 
         // Player rotation
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
@@ -46,8 +50,16 @@ public class PlayerController : MonoBehaviour
         // Unlock cursor when the player presses the escape key
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            if (Cursor.lockState == CursorLockMode.None)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
         }
     }
 }
