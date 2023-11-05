@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
+	194389964	Play_TestTone_3D			\Default Work Unit\Play_TestTone_3D	
 	211167583	Play_TestTone_2D			\Default Work Unit\Play_TestTone_2D	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	38833327	TestTone_1K_1second_mono	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Mac\SFX\Testing\TestTone_1K_1second_mono_10C4C929.wem		\Actor-Mixer Hierarchy\TestAudio\Testing\TestTone_2D\TestTone_1K_1second_mono		88296
+	38833327	TestTone_1K_1second_mono	D:\SFX_AVR\PROJECTS\_GameOff-2023\GameOff-2023\GameOff-2023_WwiseProject\.cache\Mac\SFX\Testing\TestTone_1K_1second_mono_10C4C929.wem		\Actor-Mixer Hierarchy\TestAudio\Testing\TestTone_3D\TestTone_1K_1second_mono		88296
 

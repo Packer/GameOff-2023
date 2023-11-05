@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_TestTone_3D" ID="{D61331DC-23C0-4207-94E8-98946B3D7D43}">
+					<ChildrenList>
+						<Action Name="" ID="{578E4CB6-CA96-41CA-8839-FE06610CF23C}" ShortID="178898670">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TestTone_3D" ID="{48A48D38-F21C-443C-8963-14DB23771714}" WorkUnitID="{D7726058-0087-4A8D-9694-48908EB644AD}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

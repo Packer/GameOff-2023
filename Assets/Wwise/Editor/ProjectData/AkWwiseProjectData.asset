@@ -429,7 +429,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 0bbf361c74d79740ad3c0f8cdfa0134e
     GuidInternal: 
-    m_lastTime: -8585024803895257064
+    m_lastTime: -8585023924755165710
     List:
     - name: Main
       guid: 764fd1c861d0ea4590a3eb98f77e38e1
@@ -497,7 +497,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 2caf2f51077cb549b8b4fba937f79568
     GuidInternal: 
-    m_lastTime: -8585024831357817479
+    m_lastTime: -8585023924888175742
     List:
     - name: Play_TestTone_2D
       guid: 85b0ecef49ce65449deb15bc44183d92
@@ -516,6 +516,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1
       minDuration: 1
+    - name: Play_TestTone_3D
+      guid: dc3113d6c023074294e898946b3d7d43
+      id: 194389964
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 2caf2f51077cb549b8b4fba937f79568
+      - ElementName: Play_TestTone_3D
+        ObjectType: 3
+        guid: dc3113d6c023074294e898946b3d7d43
+      Path: Events\Default Work Unit\Play_TestTone_3D
+      maxAttenuation: 350
+      maxDuration: -1
+      minDuration: -1
   - PhysicalPath: Events\FOLEY.wwu
     PathAndIcons:
     - ElementName: Events
@@ -678,7 +695,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 90ea3965b4586f43b6bb4c791c022c9a
     GuidInternal: 
-    m_lastTime: -8585024080086984899
+    m_lastTime: -8585023925008465519
     List:
     - name: PLAYER
       guid: 3f07b6cf4410304e9aebfff25b8e26e5
@@ -1311,7 +1328,7 @@ MonoBehaviour:
     m_lastTime: -8585029780297108095
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000d00000013000000140000001600000018000000190000001a0000001c0000001d0000001e0000001f0000002000000025000000
+  ExpandedWaapiItemIds: 05000000080000000a0000000d00000013000000140000001600000018000000190000001a0000001c0000001d0000001e0000001f00000020000000250000002600000027000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

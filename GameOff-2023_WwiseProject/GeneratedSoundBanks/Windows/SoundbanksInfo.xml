@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A92798E8-5C5E-F89D-62A7-923817B57F64}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{80134938-72FA-62CD-CCAC-0B9FA8228AB8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -130,7 +130,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{B21C9344-CFFB-A949-6EDB-8BCB69E4FFE8}">
+		<SoundBank Id="1512859615" Type="User" Language="SFX" Hash="{3A8A9339-7852-18B8-40EE-5DE8D03577BE}">
 			<ShortName>Testing</ShortName>
 			<Path>Testing.bnk</Path>
 			<Media>
@@ -141,6 +141,14 @@
 			</Media>
 			<Events>
 				<Event Id="211167583" Name="Play_TestTone_2D" DurationType="OneShot" DurationMin="1" DurationMax="1">
+					<MediaRefs>
+						<MediaRef Id="38833327"/>
+					</MediaRefs>
+					<AuxBusRefs>
+						<AuxBusRef Id="2068062714" Name="Bridge"/>
+					</AuxBusRefs>
+				</Event>
+				<Event Id="194389964" Name="Play_TestTone_3D" MaxAttenuation="350" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="38833327"/>
 					</MediaRefs>
@@ -362,5 +370,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{85D85A80-CE38-1221-01A3-AE24613EA20D}</FileHash>
+	<FileHash>{7ABED0F8-F063-EE38-D28E-6923B5A3B80E}</FileHash>
 </SoundBanksInfo>

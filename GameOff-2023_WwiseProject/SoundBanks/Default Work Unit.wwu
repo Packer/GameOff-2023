@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Testing" ID="{F578A2BE-1B78-4A3F-9E5E-E9412DE20EBE}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_TestTone_3D" ID="{D61331DC-23C0-4207-94E8-98946B3D7D43}" WorkUnitID="{512FAF2C-7C07-49B5-B8B4-FBA937F79568}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TestTone_2D" ID="{EFECB085-CE49-4465-9DEB-15BC44183D92}" WorkUnitID="{512FAF2C-7C07-49B5-B8B4-FBA937F79568}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

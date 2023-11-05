@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID PAUSE_MUSICSYSTEM = 750153198U;
         static const AkUniqueID PLAY_FOOTSTEP_MATERIALSWITCH = 4225883816U;
         static const AkUniqueID PLAY_TESTTONE_2D = 211167583U;
+        static const AkUniqueID PLAY_TESTTONE_3D = 194389964U;
         static const AkUniqueID START_MUSICSYSTEM = 206882740U;
         static const AkUniqueID STOP_MUSICSYSTEM = 3296906710U;
     } // namespace EVENTS
