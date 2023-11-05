@@ -13,7 +13,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{94DDBC4C-BEB3-4EA0-8430-B4B707F5C3F8}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
+							<ObjectRef Name="MUSIC" ID="{8ADAB767-4BA8-4463-91B9-06E0D1C6F07B}" WorkUnitID="{7A8C7622-B666-45BB-8B49-D89B50C9A276}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -183,6 +183,10 @@
 							</StateGroupInfo>
 						</StateGroupList>
 						<CustomStateList>
+							<CustomState>
+								<StateRef Name="MainMenu" ID="{67885983-1816-43B5-A587-1D4A42D7E5B7}"/>
+								<CustomState Name="" ID="{4FF17586-A8DA-40D1-AB93-1AFC28BA6D6C}" ShortID="282793430"/>
+							</CustomState>
 							<CustomState>
 								<StateRef Name="Pause" ID="{84D86DFB-F06C-4410-9334-EBD4B893009B}"/>
 								<CustomState Name="" ID="{16E69671-9375-4E51-8DA1-1F374ED005FE}" ShortID="902125715">

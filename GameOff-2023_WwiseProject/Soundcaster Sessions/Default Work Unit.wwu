@@ -13,19 +13,51 @@
 							<ObjectRef Name="Break_Footstep_MaterialSwitch" ID="{EEE78BC5-DE61-44A2-92B1-3A69471A7EA0}" WorkUnitID="{4DC6E610-6BB0-46E5-A1E7-DD78C25A1877}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Start_MusicSystem" ID="{5CD27859-1AF5-4393-8443-DE8B3C88BF8E}" WorkUnitID="{C0AC4573-6DB0-491A-A529-E58CEB95C024}"/>
+							<Position X="2" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_HullHealth" ID="{8830C852-97E0-4406-92E8-28E395FC4082}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_Overheat" ID="{49363FD5-3AD0-44E3-82C4-2DADF4582B2E}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_MUSIC_Bus" ID="{A8462E30-CEB8-4799-A99E-32EB3B1171CE}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_MASTER_Bus" ID="{7C8D5144-EA24-47C7-AF19-793CCD9995B5}"/>
+							<Value>100</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_UI_Bus" ID="{718F3248-901E-4B0B-8852-D1CD5323019A}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_SFX_Bus" ID="{4F110ED4-2469-4B75-9770-538F8C414D1E}"/>
+							<Value>100</Value>
+						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="RTPC_PlayerSpeed" ID="{3E139FCB-80A3-4BB4-80A4-381FD7ABC2F8}"/>
 							<Value>1</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RTPC_VO_Bus" ID="{863EB509-DCD6-4F47-B676-9591D5123783}"/>
+							<Value>100</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{6A1C19D8-4808-45B3-8EC6-993F0E4C422C}"/>
+						<CurrentStateRef Name="Pause" ID="{84D86DFB-F06C-4410-9334-EBD4B893009B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="TopFloor" ID="{2B26B418-4C26-491B-89A0-C5EED2DDC6BB}"/>
-						<CurrentSwitchRef Name="NoMusic" ID="{D611BE43-64D3-4F94-9C4E-9A9E97E8DBAF}"/>
+						<CurrentSwitchRef Name="BottomFloor" ID="{D92F7141-FB06-4760-B339-2CE1814EC121}"/>
+						<CurrentSwitchRef Name="Test" ID="{A4E50778-5338-480E-A7DF-E6D2EF43338F}"/>
 						<CurrentSwitchRef Name="Walk" ID="{143A8E65-D53B-4E09-BF37-1E1F19045313}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

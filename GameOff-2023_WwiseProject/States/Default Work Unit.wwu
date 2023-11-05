@@ -4,10 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{2FB79187-6B67-483C-8EBC-97FCC0AC1680}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="Gamestate" ID="{344A1F8B-0BED-40B3-8E77-92B17C0785CE}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.15"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{6A1C19D8-4808-45B3-8EC6-993F0E4C422C}"/>
 						<State Name="InGame" ID="{8590268A-4009-4CA6-9774-29C820411799}"/>
 						<State Name="Pause" ID="{84D86DFB-F06C-4410-9334-EBD4B893009B}"/>
+						<State Name="MainMenu" ID="{67885983-1816-43B5-A587-1D4A42D7E5B7}"/>
 					</ChildrenList>
 				</StateGroup>
 				<StateGroup Name="PlayerState" ID="{1E7D3474-E5D8-4C08-8399-F3A9EFC5A11A}">

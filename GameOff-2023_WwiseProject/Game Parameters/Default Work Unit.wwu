@@ -3,15 +3,64 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{6539EA90-58B4-436F-B6BB-4C791C022C9A}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="RTPC_PlayerSpeed" ID="{3E139FCB-80A3-4BB4-80A4-381FD7ABC2F8}">
-					<PropertyList>
-						<Property Name="InitialValue" Type="Real64" Value="1"/>
-						<Property Name="Max" Type="Real64" Value="3"/>
-						<Property Name="RTPCRamping" Type="int16" Value="1"/>
-						<Property Name="SlewRateDown" Type="Real64" Value="1"/>
-						<Property Name="SlewRateUp" Type="Real64" Value="1"/>
-					</PropertyList>
-				</GameParameter>
+				<Folder Name="VOLUME_CONTROL" ID="{C26694C2-C0B6-4470-B4CF-1BD00797CE72}" ShortID="45461811">
+					<ChildrenList>
+						<GameParameter Name="RTPC_SFX_Bus" ID="{4F110ED4-2469-4B75-9770-538F8C414D1E}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MASTER_Bus" ID="{7C8D5144-EA24-47C7-AF19-793CCD9995B5}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+								<Property Name="SlewRateDown" Type="Real64" Value="1"/>
+								<Property Name="SlewRateUp" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_VO_Bus" ID="{863EB509-DCD6-4F47-B676-9591D5123783}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_MUSIC_Bus" ID="{A8462E30-CEB8-4799-A99E-32EB3B1171CE}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_UI_Bus" ID="{718F3248-901E-4B0B-8852-D1CD5323019A}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="PLAYER" ID="{CFB6073F-1044-4E30-9AEB-FFF25B8E26E5}" ShortID="636687341">
+					<ChildrenList>
+						<GameParameter Name="RTPC_PlayerSpeed" ID="{3E139FCB-80A3-4BB4-80A4-381FD7ABC2F8}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="1"/>
+								<Property Name="Max" Type="Real64" Value="3"/>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+								<Property Name="SlewRateDown" Type="Real64" Value="1"/>
+								<Property Name="SlewRateUp" Type="Real64" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SHIP" ID="{17E93B18-6DC8-46D6-9CBB-EAC10191FEE8}" ShortID="598422775">
+					<ChildrenList>
+						<GameParameter Name="RTPC_Overheat" ID="{49363FD5-3AD0-44E3-82C4-2DADF4582B2E}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="0"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="RTPC_HullHealth" ID="{8830C852-97E0-4406-92E8-28E395FC4082}">
+							<PropertyList>
+								<Property Name="InitialValue" Type="Real64" Value="100"/>
+							</PropertyList>
+						</GameParameter>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
