@@ -28,6 +28,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pause_MusicSystem" ID="{A0AF30FE-3026-40ED-8EB4-56299D74061D}">
+					<ChildrenList>
+						<Action Name="" ID="{86C7BFA4-A725-4198-BB54-A22212F2896A}" ShortID="85063430">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MusicSwitch" ID="{E4996977-0CFC-4F73-A90D-B209D275D47E}" WorkUnitID="{9D0B61B1-526C-4C9F-96D7-416F1DDFA37B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

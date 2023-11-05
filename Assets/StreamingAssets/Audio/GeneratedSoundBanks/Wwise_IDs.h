@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BREAK_FOOTSTEP_MATERIALSWITCH = 3475931801U;
+        static const AkUniqueID PAUSE_MUSICSYSTEM = 750153198U;
         static const AkUniqueID PLAY_FOOTSTEP_MATERIALSWITCH = 4225883816U;
         static const AkUniqueID PLAY_TESTTONE_2D = 211167583U;
         static const AkUniqueID START_MUSICSYSTEM = 206882740U;
@@ -29,6 +30,7 @@ namespace AK
             namespace STATE
             {
                 static const AkUniqueID INGAME = 984691642U;
+                static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID PAUSE = 3092587493U;
             } // namespace STATE
@@ -94,7 +96,14 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID RTPC_HULLHEALTH = 3751928492U;
+        static const AkUniqueID RTPC_MASTER_BUS = 88991926U;
+        static const AkUniqueID RTPC_MUSIC_BUS = 3432596327U;
+        static const AkUniqueID RTPC_OVERHEAT = 33426215U;
         static const AkUniqueID RTPC_PLAYERSPEED = 2653406601U;
+        static const AkUniqueID RTPC_SFX_BUS = 3067876527U;
+        static const AkUniqueID RTPC_UI_BUS = 3538978622U;
+        static const AkUniqueID RTPC_VO_BUS = 3115923421U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
@@ -128,6 +137,7 @@ namespace AK
     {
         static const AkUniqueID BRIDGE = 2068062714U;
         static const AkUniqueID CAPTAINSQUARTERS = 2354497765U;
+        static const AkUniqueID PAUSEVERB = 249084106U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

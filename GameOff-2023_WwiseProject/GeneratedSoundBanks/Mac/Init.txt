@@ -17,6 +17,23 @@ State	ID	Name	State Group			Notes
 	748895195	None	Gamestate			
 	984691642	InGame	Gamestate			
 	3092587493	Pause	Gamestate			
+	3604647259	MainMenu	Gamestate			
+
+Custom State	ID	Name	State Group	Owner		Notes
+	118546582	InGame	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
+	375739412	Pause	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC		
+	404706744	Pause	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REVERBS\CaptainsQuarters		
+	690226436	Pause	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\VO		
+	742433119	InGame	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\MUSIC		
+	999203974	Pause	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\REVERBS\Bridge		
+	1050433086	Pause	Gamestate	\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX		
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	88991926	RTPC_MASTER_Bus			\Default Work Unit\VOLUME_CONTROL\RTPC_MASTER_Bus	
+	3067876527	RTPC_SFX_Bus			\Default Work Unit\VOLUME_CONTROL\RTPC_SFX_Bus	
+	3115923421	RTPC_VO_Bus			\Default Work Unit\VOLUME_CONTROL\RTPC_VO_Bus	
+	3432596327	RTPC_MUSIC_Bus			\Default Work Unit\VOLUME_CONTROL\RTPC_MUSIC_Bus	
+	3538978622	RTPC_UI_Bus			\Default Work Unit\VOLUME_CONTROL\RTPC_UI_Bus	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Master Audio Bus\SFX\Ambience	
@@ -37,12 +54,15 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	MUSIC			\Default Work Unit\Master Audio Bus\MUSIC	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	249084106	PauseVerb			\Default Work Unit\Master Audio Bus\REVERBS\PauseVerb	
 	2068062714	Bridge			\Default Work Unit\Master Audio Bus\REVERBS\Bridge	
 	2354497765	CaptainsQuarters			\Default Work Unit\Master Audio Bus\REVERBS\CaptainsQuarters	
 
 Effect plug-ins	ID	Name	Type				Notes
 	2265839006	Not_A_Yellow_Submarine	Wwise RoomVerb			
+	2656259783	PA_Announcement1	Wwise Matrix Reverb			
 	2891462749	Room_Medium_High_Absorbtion	Wwise RoomVerb			
+	3559982155	Hall_Stop_Screaming	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

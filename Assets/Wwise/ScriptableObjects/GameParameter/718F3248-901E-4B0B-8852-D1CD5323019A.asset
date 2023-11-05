@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b975216bbf9854449baea54690f3ef84, type: 3}
+  m_Name: 718F3248-901E-4B0B-8852-D1CD5323019A
+  m_EditorClassIdentifier: 
+  objectName: RTPC_UI_Bus
+  id: 3538978622
+  guid: 718F3248-901E-4B0B-8852-D1CD5323019A

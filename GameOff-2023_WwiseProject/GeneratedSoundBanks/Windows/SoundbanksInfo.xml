@@ -9,13 +9,15 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{789812A7-AF76-1C96-1ABA-B29A7A520028}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A92798E8-5C5E-F89D-62A7-923817B57F64}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="2265839006" Name="Not_A_Yellow_Submarine" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="2656259783" Name="PA_Announcement1" LibName="Wwise Matrix Reverb" LibId="7536643"/>
 					<Plugin Id="2891462749" Name="Room_Medium_High_Absorbtion" LibName="Wwise RoomVerb" LibId="7733251"/>
+					<Plugin Id="3559982155" Name="Hall_Stop_Screaming" LibName="Wwise RoomVerb" LibId="7733251"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -26,7 +28,11 @@
 				<Bus Id="85412153" Name="Ambience"/>
 				<Bus Id="247557814" Name="Foley"/>
 				<Bus Id="284967655" Name="Ship"/>
-				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="393239870" Name="SFX">
+					<AuxBusRefs>
+						<AuxBusRef Id="249084106" Name="PauseVerb"/>
+					</AuxBusRefs>
+				</Bus>
 				<Bus Id="612957004" Name="emitters"/>
 				<Bus Id="1106291253" Name="beds"/>
 				<Bus Id="1132214669" Name="interior"/>
@@ -38,9 +44,21 @@
 				<Bus Id="3545700988" Name="REVERBS"/>
 				<Bus Id="3567116701" Name="Creatures"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="3991942870" Name="MUSIC"/>
+				<Bus Id="3991942870" Name="MUSIC">
+					<AuxBusRefs>
+						<AuxBusRef Id="249084106" Name="PauseVerb"/>
+					</AuxBusRefs>
+				</Bus>
 			</Busses>
 			<AuxBusses>
+				<AuxBus Id="249084106" Name="PauseVerb">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="2656259783"/>
+							<PluginRef Id="3559982155"/>
+						</ShareSets>
+					</PluginRefs>
+				</AuxBus>
 				<AuxBus Id="2068062714" Name="Bridge">
 					<PluginRefs>
 						<ShareSets>
@@ -57,7 +75,14 @@
 				</AuxBus>
 			</AuxBusses>
 			<GameParameters>
+				<GameParameter Id="33426215" Name="RTPC_Overheat"/>
+				<GameParameter Id="88991926" Name="RTPC_MASTER_Bus"/>
 				<GameParameter Id="2653406601" Name="RTPC_PlayerSpeed"/>
+				<GameParameter Id="3067876527" Name="RTPC_SFX_Bus"/>
+				<GameParameter Id="3115923421" Name="RTPC_VO_Bus"/>
+				<GameParameter Id="3432596327" Name="RTPC_MUSIC_Bus"/>
+				<GameParameter Id="3538978622" Name="RTPC_UI_Bus"/>
+				<GameParameter Id="3751928492" Name="RTPC_HullHealth"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="3285234865" Name="PlayerState">
@@ -73,6 +98,7 @@
 						<State Id="748895195" Name="None"/>
 						<State Id="984691642" Name="InGame"/>
 						<State Id="3092587493" Name="Pause"/>
+						<State Id="3604647259" Name="MainMenu"/>
 					</States>
 				</StateGroup>
 			</StateGroups>
@@ -124,7 +150,7 @@
 				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{B726ED8E-059D-DDB6-3743-780B0DCC1FA3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2DD9A85A-3000-9090-767D-E77062BD7846}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -146,7 +172,7 @@
 				</File>
 				<File Id="450785255" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
-					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_79295EF4.wem</CachePath>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_95E5231E.wem</CachePath>
 				</File>
 				<File Id="484099287" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-005.wav</ShortName>
@@ -162,7 +188,7 @@
 				</File>
 				<File Id="647059479" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
-					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_E40380A7.wem</CachePath>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_7A52F6A9.wem</CachePath>
 				</File>
 				<File Id="731137033" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-004.wav</ShortName>
@@ -182,11 +208,11 @@
 				</File>
 				<File Id="809261433" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
-					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_AF0D970B.wem</CachePath>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_7E47C2A5.wem</CachePath>
 				</File>
 				<File Id="833425414" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\TopFloor\SCALE_Footstep_TopFloor_Walk-002.wav</ShortName>
-					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_F3DDC6A1.wem</CachePath>
+					<CachePath>SFX/Foley/Footsteps/TopFloor/SCALE_Footstep_TopFloor_Walk-002_FC300CD2.wem</CachePath>
 				</File>
 				<File Id="921943339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Foley\Footsteps\Stairs\SCALE_Footstep_Stairs_Walk-002.wav</ShortName>
@@ -211,6 +237,7 @@
 			</Media>
 			<Events>
 				<Event Id="3475931801" Name="Break_Footstep_MaterialSwitch" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="750153198" Name="Pause_MusicSystem" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4225883816" Name="Play_Footstep_MaterialSwitch" DurationType="OneShot" DurationMin="0.32274464" DurationMax="0.63527083">
 					<SwitchContainers>
 						<SwitchContainer>
@@ -335,5 +362,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{21C3861D-9AA9-DE3C-A5ED-32EEDEA12A8C}</FileHash>
+	<FileHash>{85D85A80-CE38-1221-01A3-AE24613EA20D}</FileHash>
 </SoundBanksInfo>
