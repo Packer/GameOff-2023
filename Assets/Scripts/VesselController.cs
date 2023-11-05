@@ -3,23 +3,48 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.GraphicsBuffer;
 
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class VesselController : MonoBehaviour
 {
     public static VesselController instance;
-
+    public Transform destinationMarker;
     public float moveDistance = 10;
     private NavMeshAgent agent;
     private NavMeshPath path;
+
+    public Transform cameraPivot;
+    public LayerMask terrainMask;
+    private Vector3 rotationNormal = Vector3.up;
+    public float a, b;
 
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         agent = GetComponent<NavMeshAgent>();   
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+        if (destinationMarker != null && destinationMarker.position != agent.destination)
+            agent.destination = destinationMarker.position;
+
+        GetGroundNormalDirection();
+        cameraPivot.rotation = Quaternion.Euler(Vector3.RotateTowards(cameraPivot.rotation.eulerAngles, rotationNormal, a, b));
+    }
+
+    public void GetGroundNormalDirection()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(cameraPivot.position, Vector3.down, out hit, 4, terrainMask))
+        {
+            rotationNormal = hit.normal;
+        }
     }
 
     public void StopNavigation()
@@ -53,12 +78,6 @@ public class VesselController : MonoBehaviour
     }
 
     public void SetSpeed(int amount)
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
     {
         
     }

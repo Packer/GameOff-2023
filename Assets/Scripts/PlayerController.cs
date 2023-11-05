@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 4.0f;
+    public float moveSpeed = 3.0f;
+    public float sprintSpeed = 6.0f;
     public float mouseSensitivity = 2.0f;
 
     public float worldOffset = 0.01f;
@@ -32,7 +33,7 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         Vector3 moveDirection = transform.TransformDirection(new Vector3(moveX, 0, moveZ).normalized);
-        cc.SimpleMove(moveDirection * moveSpeed * (sprint ? 1.25f : 1f));
+        cc.SimpleMove(moveDirection * (sprint ? sprintSpeed : moveSpeed));
 
         // Player rotation
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
